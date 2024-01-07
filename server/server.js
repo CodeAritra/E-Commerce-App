@@ -38,6 +38,10 @@ app.use("/api/product", productroute);
 //   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 // });
 
+app.get("/", (req, res) => {
+  res.json("Running");
+});
+
 //port
 const port = process.env.port || 5000;
 
