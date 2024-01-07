@@ -7,14 +7,14 @@ import categoryroute from "./routes/categoryRoute.js";
 import productroute from "./routes/productRoutes.js";
 import cors from "cors";
 import path from "path";
-import { fileURLToPath } from "url";
+// import { fileURLToPath } from "url";
 
 //config env
 dotenv.config();
 
 //esmodule fix
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
 
 //connect db
 connectDB();
@@ -26,7 +26,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(morgan("dev"));
-app.use(express.static(path.join(__dirname, "./client/build")));
+// app.use(express.static(path.join(__dirname, "./client/build")));
 
 //routes
 app.use("/api/auth", authroute);
@@ -34,9 +34,9 @@ app.use("/api/category", categoryroute);
 app.use("/api/product", productroute);
 
 //rest api
-app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+// app.get("*", function (req, res) {
+//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
 
 //port
 const port = process.env.port || 5000;
