@@ -37,7 +37,7 @@ const Header = () => {
             <span className="navbar-toggler-icon" />
           </button>
           <Link className="navbar-brand" to="/">
-            🛒 Debolina
+            🛒 Luxury Loot
           </Link>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
